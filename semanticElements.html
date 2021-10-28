@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        <blockquote> : element defines a section that is from other source(Ex.: Website, newspaper)
+            cite: here we can write source of extrnal info(Ex. URL, website, webApp)
+            Default intended
+        <q> : short quote : Inforamtion that we need to display in "".
+            cite: for mentioning source info
+        <abbr> : to show acronyms or shortforms
+            title: to show tooltip(whenever user enters mouse on text)
+            <abbr title="World Health Organisation">WHO</abbr>
+        <address> : to show contact information (Ex. physical address, email, social media address) //Need to check can we use this with author name            
+        <cite> : for to dispaly title (Ex.book, poem, song, movie, paitaing,diagrams)
+        <bdo> : Bi-directional override
+            dir : mention text direction
+    -->
+    <a href="">
+        Gmail Address:
+        <address>
+            xyz@gmail.com
+        </address>
+    </a>
+
+    <address>
+        Gmail address:
+        <a href="">
+            xyz@gmail.com
+        </a>
+    </address>
+
+    <p>
+        For more information please visit: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>
+    </p>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+        <img src="./statics/images/bird.jpg">
+    </a>
+    <br />
+
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML">
+        <q>HTML</q> (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and
+        structure of web content. Other technologies besides HTML are generally used to describe a web page's
+        appearance/presentation (CSS) or functionality/behavior (JavaScript).
+    </blockquote>
+    <abbr title="World Health Organisation">WHO</abbr>
+    <pre>
+        Address: 
+        <address>
+            <bdo dir="rtl">302/B, Neetal Vihar</bdo>,
+            Dhyari Narhe Road,
+            Pune 411041
+        </address>
+    </pre>
+
+    <pre>
+        <cite>Title of the poem</cite>
+        302/B, Neetal Vihar,
+        Dhyari Narhe Road,
+        Pune 411041
+    </pre>
+
+</body>
+
+</html>

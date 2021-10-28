@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border-bottom: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        table {
+            border-color: red;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(228, 224, 224);
+        }
+
+        tr:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Table Styling:
+        border: border-width border-style border-color //Short hand property
+        border-collapse: 
+        border-radius //pending
+        border-width:1px
+        border-style: solid 
+        border-color: black
+        width
+        border-spacing
+
+
+        style: attribute - inline style : highest prefrences/priority
+        <style>: html <head> - inner style
+
+        Styling applies by 3 ways:
+        1. Tag name/Element name : Ex.: table,td,th,caption,col
+        2. class'(html attribute: value: string) css representation: '.'
+         Ex.<h1 class="myHeading">Heading</h1>)  
+        3. id(html attribute)    css represtation: '#'
+           Ex.<h1 id="pageHeading">Heading</h1>)  
+
+
+           Table data: Left align
+           thead : background
+           caption: bold/color
+           Add id column at first place 
+    
+           select : ctrl+/
+    -->
+    <table>
+        <caption style="font-size: 16px;">Personal Info Table</caption>
+        <tr>
+            <th>Id</th>
+            <th style="width:200px">Name</th>
+            <th>City</th>
+            <th colspan="2">Contact Number</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Abc</td>
+            <td>Pune</td>
+            <td>999484499</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Abc</td>
+            <td>Pune</td>
+            <td>999484499</td>
+            <td>999484499</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>PQR</td>
+            <td>Mumbai</td>
+            <td>999484499</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>XYZ</td>
+            <td>Pune</td>
+            <td>999484499</td>
+            <td></td>
+        </tr>
+    </table>
+
+
+
+
+    <!-- <table>
+        <caption style="font-size: 16px;">Personal Info Table</caption>
+        <colgroup>
+            <col span="2">
+            <col span="1" style="background-color: yellow;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th style="border: 1px solid black;width:200px">Name</th>
+                <th>City</th>
+                <th colspan="2">Contact Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Abc</td>
+                <td style="border: 1px solid black;color:blue">Pune</td>
+                <td>999484499</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Abc</td>
+                <td>Pune</td>
+                <td>999484499</td>
+                <td>999484499</td>
+            </tr>
+            <tr>
+                <td>PQR</td>
+                <td>Mumbai</td>
+                <td>999484499</td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>XYZ</td>
+                <td>Pune</td>
+                <td>999484499</td>
+            </tr>
+        </tfoot>
+    </table> -->
+
+</body>
+
+</html>
