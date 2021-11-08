@@ -1,0 +1,33 @@
+CSS:
+- CSS the language to style Web/HTML page
+- CSS :Cascadig style sheet
+
+Inline: 
+Inner style:
+External:
+ .css 
+
+ <link> 
+ rel=""
+ href=""
+  
+Uses:
+1. We can apply single css file on multiple Web pages
+2. Code sepration : maintains of Code
+3. Code optimization
+4. We can change CSS of any selector, on multiple web pages using single change
+
+
+CSS selector:
+1. Simple selector: 
+    i.Name: tag/ element name
+    ii. Id: '#' 
+    iii. Class:
+
+ii. Id selector:
+id as attribute : ex. <p id="myParagraph"> 
+css: #
+
+iii. Class selector: 
+class as attribute: ex. <p class="myParagraph">
+css : .  
