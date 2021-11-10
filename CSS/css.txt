@@ -6,28 +6,135 @@ Inline:
 Inner style:
 External:
  .css 
+ Ex. styles.css
 
+To link with HTML file:
  <link> 
- rel=""
+ rel="stylesheet" 
  href=""
   
-Uses:
+Extrnal file Uses:
 1. We can apply single css file on multiple Web pages
 2. Code sepration : maintains of Code
 3. Code optimization
 4. We can change CSS of any selector, on multiple web pages using single change
 
+CSS comments:
+/* */ single comment
+
+/*
+
+multiline comments
+
+*/
+
+CSS syntax:
+selector{
+    propety: value;
+}
 
 CSS selector:
 1. Simple selector: 
-    i.Name: tag/ element name
+    i.Name: html tag/ element name
     ii. Id: '#' 
     iii. Class:
 
 ii. Id selector:
-id as attribute : ex. <p id="myParagraph"> 
-css: #
+HTML : id as attribute : ex. <p id="myParagraph"> 
+css: #myParagraph
+Ex.
+#myParagraph{
+    color:green;
+}
 
 iii. Class selector: 
-class as attribute: ex. <p class="myParagraph">
-css : .  
+HTML: class as attribute: ex. <p class="myParagraphs">
+css : .myParagraphs  
+Ex. .myParagraphs{
+    color: blue;
+}
+
+Grouping selector:
+h1{
+    color: red;
+}
+p{
+    color: red;
+}
+
+h1,p{
+    color:red
+}
+
+Universal selector:
+* - all
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+Day2:
+Color:
+background-color: //background color
+color: //text color
+border-color: // border color
+
+1. Color Name (140)
+    Ex. red, blue, green, etc
+
+    p{
+        color:green;
+    }
+
+2. RGB : Red Green Blue : Intensity of color
+    red: rgb(255,0,0)
+    green : rgb(0, 255, 0)
+    black: rgb(0,0,0)
+    white: rgb(255,255,255)
+
+    rgb 0-255
+    p{
+        color : rgb(0, 255, 0)
+    }
+
+    a - alpha (opatcity/transpernecy)
+
+    Gray shades:
+    rgb(60,60,60)
+    rgba - Red Blure Green alpha value
+    alpha value 0.0-1.0
+    0.0- full transpernecy
+    1.0- no transpernecy
+
+3. HEX: 00 00 00 - FFFFFF
+
+   rr gg bb
+
+   red: #f00
+   green: #0f0
+   blue: #00f
+
+    p{
+        color: #00ff00 /*green*/
+    } 
+
+    white rgb(255,255,255) #ffffff
+    black rgb(0,0,0) #000000
+
+    rr gg bb : 00 00 00
+    #000 
+
+4. hsl : hue saturation lightness
+Hue : hsl(h, s, l)
+r - 0 -120 red
+g - 120-240
+b - 240-360
+
+saturation: 0%-100% (Gray shades)
+
+lightness: opatcity/transpernecy 0%-100%
+
+green: hsl(120,0%,100%)
+
+hsla : hue saturation lightness alpha
