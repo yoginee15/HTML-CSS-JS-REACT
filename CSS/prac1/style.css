@@ -1,0 +1,30 @@
+header,footer{
+    height: 50px;
+    width: 100%;
+    background: rgb(199, 199, 212);
+    position: fixed;
+}
+header{
+    top:0
+}
+footer{
+    bottom: 0;
+}
+main{
+    height: 90px;
+    width: 100%;
+    margin-top:90px;
+    margin-bottom:90px;
+}
+#imgDiv{
+height: 800px;
+width: 100%;
+border: 1px solid black;
+position: relative;
+}
+img{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    right:0;
+}

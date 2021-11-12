@@ -186,3 +186,28 @@ html support for image:
                   : cover                          
 
 7. background (shorthand) : background-color background-image background-repeat background-attachment background-position;
+
+
+position: top right bottom left
+
+position: relative;
+right:0
+
+HTML elements position:
+1. static : default. Normal flow. How we written elements in our html file. Top, right, bottom, left won't work with position static.
+
+2. relative: render with normal flow. you can use here top, right, bottom, left.
+It will create gap. Other element will not fill that gap.
+
+3. fixed: screen/view port/ borwser  
+position: fixed
+top: 0;
+right:0
+
+It will not create gap.
+
+4. absolute:
+1. parent position: relative
+2. position: absolute
+
+5. sticky: Its a combination of relative and fixed
