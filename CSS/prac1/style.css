@@ -23,8 +23,9 @@ border: 1px solid black;
 position: relative;
 }
 img{
-    position: absolute;
+    position: sticky;
     height: 90px;
     width: 90px;
     right:0;
+    top:0
 }

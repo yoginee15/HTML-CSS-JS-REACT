@@ -1,0 +1,16 @@
+h1{
+    padding: 25px;
+    /* display: inline-block; */
+    width: 150px;
+    margin: 90px;
+    background: blueviolet;
+}
+#heading1{
+    border-width: 2px;
+    border-top-width: 5px;
+    border-style: solid;
+}
+#heading2{
+    border: 5px solid black;
+    border-radius: 2.5px;
+}
