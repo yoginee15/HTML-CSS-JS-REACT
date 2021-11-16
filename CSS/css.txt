@@ -306,3 +306,64 @@ Ex.: border-top: 1px solid black;
 
 Border Radius:
 border-radius: px,pt,cm,em,etc (In case we want rounded corners)
+
+margin:
+- To create space around html elements.
+- Space outside border
+
+Shorthand propety:
+margin: 10px; (t/r/b/l)
+margin: 10px 5px;(t/b, l/r)
+margin: 10px 5px 15px;(t, r/l, b)
+margin: 2px 4px 6px 8px;(t, r, b, l)
+
+margin-top:
+margin-right:
+margin-left:
+margin-bottom:
+
+values:
+1. auto; // borwser calculated
+2. length: px,pt,em,pt,cm
+3. %: for left and right margin: specifies margin in % of width of that element
+    : for top and bottom margin: specifies margin in % of height of that element
+4. inherit : values gets inherited from its parent
+
+* We can specify negative values for margin
+
+You can set the margin as auto to place your html element horizontally center with its container.(You must need to specify width)
+
+margin collapse:
+div: margin-bottom; : 50px;
+div: margin: 80px;
+
+div
+ |
+ |
+ |
+ |
+ |
+div 
+
+padding:
+To create space between content and border.
+- inside border
+
+Shorthand propety:
+padding: 5px; (4postions)
+padding: 5px 10px (t/b, l/r)
+padding: 5px 10px 15px;(t, r/l, b)
+padding: 5px 10px 5px 10px;(t, r, b, l)
+
+padding-top:
+padding-right:
+padding-bottom:
+padding-left:
+
+values:
+1. length: px,pt,cm,em,etc
+2. %: for left and right padding: specifies padding in % of width of that element
+    : for top and bottom padding: specifies padding in % of height of that element
+3. inherit
+
+* negative values are not allowed.

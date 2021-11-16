@@ -1,0 +1,29 @@
+
+#centerDiv{
+   border: 1px solid black;
+   height: 90px;
+   margin: 100px auto;
+   position: relative;
+}
+#centerChild{
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+}
+
+#centerChild2{
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 0;
+}
+
+#div2{
+    height: 120px;
+    width: 100%;
+    border: 1px solid black;
+    margin: 50px auto;
+}
