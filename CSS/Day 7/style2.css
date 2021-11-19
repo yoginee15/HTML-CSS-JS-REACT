@@ -1,0 +1,16 @@
+div{
+    margin: auto;
+}
+#div1{
+    width: 150px;
+    height: 100px;
+    padding: 2px 3px 4px 5px;  
+    border: 2px solid black;
+}
+#div2{
+    width: 150px;
+    height: 100px;
+    padding: 2px 3px 4px 5px;  
+    border: 2px solid black;
+   box-sizing: border-box ;
+}

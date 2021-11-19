@@ -367,3 +367,98 @@ values:
 3. inherit
 
 * negative values are not allowed.
+
+height and width:
+content height/width
+actual width : content width + padding + border
+actual height : content height + padding + border
+
+box-sizing: content-box(default) | border-box | intial | inherit
+
+div{
+    height: 20px; //content height
+    width: 20px; // content width
+    box-sizing: content-box;   
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    padding: 0px 20px;
+    margin: 25px;
+}
+
+div{
+    height: 60px;
+    padding: 15px 20px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin: 25px;
+}
+
+min-width / max-width:
+
+max-width : To set maximum width of your element/content. content is lesser than your max-width it will not show any effect. But if device width is smaller than your ma-width then it will increase height.
+
+width < max-width // max-width ignore
+width > max-width // width
+
+min-width: to set minimum width of your html content/element 
+            content is larger than specified min-width it will not show any effect but if your device width is smaller than min-width it will add scroll
+
+
+
+
+div{
+    width: 150px;
+    height: 100px;
+              t   r   b   l  
+    padding: 2px 3px 4px 5px;
+            t/r/b/l
+    border: 2px solid black;
+    box-sizing : content-box;
+}
+
+total/actual width = left(padding+border)+
+                     content width/width +
+                     right(padding+border)
+                    = 5px + 2px+ 150px + 3px + 2px
+                    = 162px
+
+total/actual height = 
+
+                    = 110px
+
+box-sizing : content-box(default value) | 
+             border-box |
+             intial |
+             inherit                       
+
+
+box-sizing: border-box             
+
+div{
+    width: 150px;
+    height: 100px;
+              t   r   b   l  
+    padding: 2px 3px 4px 5px;
+            t/r/b/l
+    border: 2px solid black;
+   box-sizing: border-box ;
+}
+actual height/ total height = top(border+padding)+
+                              content height +
+                               bottom(border+padding) 
+                        100 = 2px+2px+x+2px4px
+                        100 = 10px+x
+                        x = 100-10
+                        x= 90px
+
+content width = 138px
+
+div{
+    width: 150px;
+    height: 100px;
+    padding: 5px;
+    border-top: 2px solid black;
+}

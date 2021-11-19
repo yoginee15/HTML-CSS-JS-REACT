@@ -1,0 +1,31 @@
+/* div{
+    height: 200px;
+    width: 400px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 10px;
+} */
+#div1{
+    margin-bottom: 20px;
+}
+#div2{
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+}
+#div3{
+    margin: auto;
+    border: 2px solid black;
+    max-width: 800px;
+}
+#div4{
+    margin: auto;
+    border: 2px solid black;
+    min-width: 800px;
+}
+#div5{
+    max-width: 400px;
+    min-width: 250px;
+    border: 2px solid black;
+
+}
