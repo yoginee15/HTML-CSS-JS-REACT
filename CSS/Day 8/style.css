@@ -1,0 +1,35 @@
+.div1{
+    width: 200px;
+    max-height: 200px;
+    border: 1px solid #0000ff;
+    overflow-x: scroll; /* horizontal */
+    overflow-y: hidden; /* vertical */
+    margin: auto;
+}
+
+.div2{
+    width: 200px;
+    min-height: 100px;
+    border: 1px solid #000000;
+    background: brown;
+    margin: 50px auto;
+    outline: 5px double green;
+    outline-offset: 5px;
+    text-align: justify;
+    text-align-last: center;
+}
+#vAlignNormal{
+    vertical-align: baseline;
+}
+#vAlignTextTop{
+    vertical-align: text-top;
+}
+#vAlignTextBottom{
+    vertical-align: text-bottom;
+}
+#vAlignTextSuper{
+    vertical-align: super;
+}
+#vAlignTextSub{
+    vertical-align: sub;
+}

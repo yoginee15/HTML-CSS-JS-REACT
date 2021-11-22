@@ -3,7 +3,18 @@ CSS:
 - CSS :Cascadig style sheet
 
 Inline: 
+<p style="color:red">Hello</p>
+
 Inner style:
+html 
+<head>
+<style>
+p{
+    color: red;
+}
+</style>
+</head>
+
 External:
  .css 
  Ex. styles.css
@@ -15,11 +26,13 @@ To link with HTML file:
   
 Extrnal file Uses:
 1. We can apply single css file on multiple Web pages
-2. Code sepration : maintains of Code
+2. Code sepration (html code: .html, style:.css)
 3. Code optimization
-4. We can change CSS of any selector, on multiple web pages using single change
+4. Maintains of Code : We can change CSS of any selector, on multiple web pages using single change
 
 CSS comments:
+/* */
+
 /* */ single comment
 
 /*
@@ -30,7 +43,10 @@ multiline comments
 
 CSS syntax:
 selector{
-    propety: value;
+    css-propety: value;
+    css-propety: value;
+    css-propety: value;
+    css-propety: value;
 }
 
 CSS selector:
@@ -48,10 +64,13 @@ Ex.
 }
 
 iii. Class selector: 
-HTML: class as attribute: ex. <p class="myParagraphs">
-css : .myParagraphs  
-Ex. .myParagraphs{
+HTML: class as attribute: ex. <p class="textWrapper colorRed">
+css : .textWrapper  
+Ex. .textWrapper{
     color: blue;
+}
+.colorRed{
+    color:red;
 }
 
 Grouping selector:
@@ -89,6 +108,7 @@ Color values:
     }
 
 2. RGB : Red Green Blue : Intensity of color
+r,g,b: min 0 - max 255
     red: rgb(255,0,0)
     green : rgb(0, 255, 0)
     black: rgb(0,0,0)
@@ -107,8 +127,8 @@ Color values:
     a - alpha (opatcity/transpernecy)
     rgba - Red Blue Green alpha value
     alpha value 0.0-1.0
-    0.0- full transpernecy
-    1.0- no transpernecy
+    0.0- full transpernecy - white
+    1.0- no transpernecy - not at all transpernecy
      red: rgb(255,0,0)
      red: rgba(255,0,0,1)
 
@@ -119,8 +139,8 @@ prefix : #rrggbb
    rr gg bb : 00-ff 00-ff 00-ff
 
    red: #f00 : #ff0000
-   green: #0f0
-   blue: #00f
+   green: #0f0 : #00ff00
+   blue: #00f : #0000ff
 
     p{
         color: #00ff00 /*green*/
@@ -398,16 +418,28 @@ div{
 
 min-width / max-width:
 
-max-width : To set maximum width of your element/content. content is lesser than your max-width it will not show any effect. But if device width is smaller than your ma-width then it will increase height.
+max-width : 
+- To set maximum width of your element/content.
+- content is lesser than your max-width it will not show any effect.
+- But if device width is smaller than your max-width then it will increase height.
 
 width < max-width // max-width ignore
 width > max-width // width
 
-min-width: to set minimum width of your html content/element 
-            content is larger than specified min-width it will not show any effect but if your device width is smaller than min-width it will add scroll
+min-width: 
+- to set minimum width of your html content/element 
+- content is larger than specified min-width it will not show any effect but if your device width is smaller than min-width it will add scroll.
+
+max-height:
+- to set maximum height of the element
+- if content is smaller then max height has no element
+- if content is larger then max-height will be apply, then that content will handled by overflow propety.
 
 
-
+min-height:
+- to set minimum height of an element
+- if content is larger then min-height then it will have no effect
+- if content is smaller then min-height will be applied.
 
 div{
     width: 150px;
@@ -462,3 +494,73 @@ div{
     padding: 5px;
     border-top: 2px solid black;
 }
+
+overflow: overflow propety controls then content of your element if its too large, than your specify area.
+
+value:
+overflow:visible: default. Its render content after outside of element specify area.
+overflow:hidden: to hide content after its specify area.
+overflow:scroll: default add both scroll bar i.e vertical and horizontally
+overflow: auto: same as scroll but when its needed.
+
+*overflow propety works only one block level element
+
+overflow-x: horizontal scroll bar
+overflow-x:visible: default. Its render content after outside of element specify area.
+overflow:hidden: to hide content after its specify area.
+overflow:scroll: default add horizontal scroll bar 
+overflow: auto: same as scroll but when its needed.
+
+overflow-y: vertical scroll bar
+overflow-y:visible: default. Its render content after outside of element specify area.
+overflow-y:hidden: to hide content after its specify area.
+overflow-y:scroll: default add vertical scroll bar 
+overflow-y: auto: same as scroll but when its needed.
+
+overflow-wrap: where borwser will break lines with long words, if content content too big.
+
+value:
+overflow-wrap : normal - word will not break, even if the overflow the container
+overflow-wrap: anywhere - long words will break if content is overflow the container
+overflow-wrap: break-word - word will break if content is overflow the container
+overflow-wrap: intial - default
+overflow-wrap: inherit - inherits from parent 
+
+
+Outline:
+outline: to draw line outside the border
+        width style color
+outline: 1px solid black;
+- style is required value
+
+outline-style: same as border style value
+outline-width: same as border width value
+outline-color: same as border color value
+
+outline-style: solid dotted dashed ridge;
+
+outline-offset: to add space between border and outline(white space)
+              : length px, pt, em, pt,etc  
+
+
+Text:
+- color/background-color
+- alignment
+- decoration
+- transformation
+- spacing
+- shadow
+
+text-align: left(default) | right | center | justify
+
+text-align-last: left(default) | right | center | justify
+
+Vertical alignment:
+vertical-align: to set element vertically align
+
+values:
+vertical-align: baseline(default)
+vertical-align: text-top
+vertical-align: text-bottom
+vertical-align: sub;
+vertical-align: super;

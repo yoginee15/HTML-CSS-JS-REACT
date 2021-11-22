@@ -1,0 +1,17 @@
+p{
+    font-size: 24px;
+    color: green
+}
+#myPragraph{
+    background: #ff0000;
+}
+.card{
+    display: inline-block;
+    width: 25%;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+.selectedCard{
+    border: 2px solid rgb(255,0,0);
+}
