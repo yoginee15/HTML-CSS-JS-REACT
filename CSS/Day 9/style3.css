@@ -1,0 +1,15 @@
+#noWrap{
+    white-space: nowrap;
+}
+#preWrap{
+    white-space: pre;
+}
+#indentedText{
+    white-space: pre-wrap;
+}
+#pre-lineWrap{
+    white-space: pre-line;
+}
+#word-spacesWrap{
+    white-space: word-spaces;
+}

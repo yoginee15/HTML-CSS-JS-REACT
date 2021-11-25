@@ -1,0 +1,36 @@
+h1{
+    text-decoration: underline;
+    text-shadow: 1px 1px #0000ff, 2px 2px #ff0000;
+}
+h2{
+    text-transform: capitalize;
+    letter-spacing: 5px;
+}
+h3{
+    text-transform: capitalize;
+}
+div{
+    width: 200px;
+    height: 500px;
+    line-height: 50px;
+    word-spacing: 10px;
+    text-indent: 30px;
+    white-space: break-spaces;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+    /* background-color: gray; */
+    border: 1px solid #000000;
+    padding: 10px 40px;
+    cursor:default;
+}
+a:default{
+    background-color: red;
+}
+a:hover{
+    background-color: green;
+}
+a:visited{
+    background-color: #ff0000;
+}

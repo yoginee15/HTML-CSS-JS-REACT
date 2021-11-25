@@ -564,3 +564,101 @@ vertical-align: text-top
 vertical-align: text-bottom
 vertical-align: sub;
 vertical-align: super;
+
+
+text-decoration: underline | line-through | overline | none
+To set/remove text-decoration for your element
+<del>: text-decoration: line-through
+none: To remove text-decoration which is applied on your element
+
+text-transform: uppercase | lowercase | captialize
+
+spacing:
+text/letters, line, word
+
+letter-spacing: length px,pt,em,etc // to give/apply space between two characters
+
+line-height: length px,pt,em,etc // to give/apply space between two lines 
+
+word-spacing: length px,pt,em,etc // to apply space between two words
+
+text-indent: length (unit-px,pt,em,pt,etc) // to apply space on first line of your element
+
+
+white-space: normal(default) | nowrap |
+            pre | pre-wrap | pre-line | break-spaces
+
+// we are using white space propety to handle/controlled white space of your elements
+
+              horizontal   vertically
+text-shadow: 2px            2px     color
+
+
+Links:
+Links , Button , Menu
+
+State:
+default: text-decoration: underline, color: blue;
+hover
+visited
+active
+
+list-style-type:disc
+               : circle
+               : square
+               : lower-roman i ii iii
+               : upper-roman I II III
+               : upper-alpha A B C
+               : lower-alpha a b C
+
+list-style-image: url('./test.png')
+
+list-style-position: outside(default)
+                   : inside
+
+list-style-type: none
+
+list-style: type position url()
+
+
+Table:
+table,th,td{
+  border: 2px solid #ff0000;
+  border-collapse: collapse  
+}
+
+th,td{
+    padding:4px; //padding
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+tr: hover{
+    background-color: #eeeeee;
+}
+th{
+    text-align: left;
+    background-color: #00ff00;
+}
+th,td{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+caption-side: top(default) | bottom | intial | inherit
+caption{
+    caption-side: bottom;
+}
+empty-cells: show | hide | intial | inherit
+
+
+Table Practical:
+table heading
+row and column sepration
+caption at bottom
+space should not be present between two borders
+all the data nd heading should render on left
+want hover effect on each row
+also want some spacing between content and border 
+table should be render on center of the page
+
