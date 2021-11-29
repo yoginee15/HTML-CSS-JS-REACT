@@ -1,0 +1,50 @@
+/* div{
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000000;
+    background-color: blue;
+    float:left;
+} */
+/* #div2{
+    visibility: hidden;
+} */
+.zIndex{
+    height: 400px;
+    width: 400px;
+    clear: both;
+
+}
+.imgWrapper{
+    height: 100%;
+    width: 100%;
+    /* position: relative; */
+    float: left;
+}
+.imgWrapper img{
+    height: 100px;
+    width: 100px;
+    float:left;
+}
+.imgWrapper p{
+    float:right
+}
+h4{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:#ffffff;
+}
+.test{
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000000;
+    background-color: blue;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#div4{
+    clear:left;
+}
