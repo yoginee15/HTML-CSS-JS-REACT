@@ -652,13 +652,40 @@ caption{
 empty-cells: show | hide | intial | inherit
 
 
-Table Practical:
-table heading
-row and column sepration
+Table  Practical:
+table  heading
+row                column    sepration
 caption at bottom
 space should not be present between two borders
 all the data nd heading should render on left
 want hover effect on each row
 also want some spacing between content and border 
-table should be render on center of the page
 
+
+display: block | inline | inline-block | none
+
+visibility: visible(default) | hidden | collapse
+(ngShow, ngHide, ngIf)
+
+align: 
+horizontally : margin:auto;
+
+vertically:
+1. padding:
+2. postion:absolute; top:50%; left: 50%; transform:translate(-50%,-50%)
+3. line-height = element height
+4. display: flex; justify-content:center; align-items:center;
+
+z-index:
+z-index: negative/lower(behind)
+
+float:
+float: left;
+float:right;
+float:none(default);
+float:inherit;
+
+
+clear:left;
+clear:right;
+clear:both;
