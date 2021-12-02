@@ -663,10 +663,22 @@ also want some spacing between content and border
 
 
 display: block | inline | inline-block | none
+block: 100% width, start on new line, default padding/margin
+inline: takes required width, not start on new line, not gets any 
+        default padding/margin, it will not allows to set height and width
+inline-block: it acts as inline but it allows to set height and width, 
+                but will not start on new line       
+none: If we want to hide element from screen then we are using display: none. Its remove element from accessibility trees. It will not maintain previous height and width        
+
 
 visibility: visible(default) | hidden | collapse
+visible: default value.The element is visible
+hidden: We can also hide element on screen using visibility: hidden. But it maintain its previous space i.e. height and width
+collapse: used for table row<tr>,column<td>,colgroup<colgroup>. It removes column/row but will not affetc table layout.
 (ngShow, ngHide, ngIf)
 
+
+To align element at center:
 align: 
 horizontally : margin:auto;
 
@@ -676,16 +688,34 @@ vertically:
 3. line-height = element height
 4. display: flex; justify-content:center; align-items:center;
 
-z-index:
+z-index: Used to work with elements stack
 z-index: negative/lower(behind)
+It only works on positioned (relative,absolute,fixed and sticky)
+We can specify positive as well as negative value
+(* Mostly use with img having opatcity)
 
-float:
+float: To position elements either on left/ right of the container
 float: left;
 float:right;
 float:none(default);
 float:inherit;
 
-
+clear: To clear or to unset float propety for element. So that element can renderd on next line
 clear:left;
 clear:right;
 clear:both;
+
+Fonts:
+font family:
+    - families: sans-serif,serif,monospace,cursive
+    - fonts: Arial, Verdana, Helvetica, Tahoma, Times New Roman, Courier New,
+    - fallback: 
+Ex. font-family: '', , Arial   
+font-style: normal(default) | italic | oblique
+font-size : length units(px,rem,pt,etc) | smaller | small | initial | inherit
+font-weight: normal(default) | bold | bolder | lighter | 100-900 | initial | inherit
+How to use google Fonts : third party: cdn or download
+font variant : normal | small-caps | all-small-caps | titling-caps | intial | inherit  
+shorthand - font : style variant weight size line-height family 
+
+size and family required

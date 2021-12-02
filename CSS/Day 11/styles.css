@@ -8,6 +8,9 @@
 /* #div2{
     visibility: hidden;
 } */
+body{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
 .zIndex{
     height: 400px;
     width: 400px;
