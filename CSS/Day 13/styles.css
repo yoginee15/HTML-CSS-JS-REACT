@@ -1,0 +1,46 @@
+header,nav{
+    width:90%;
+    margin:auto
+}
+.active{
+    background-color: yellow;
+}
+nav{
+    height: 50px;
+    background-color: #000000;
+}
+ul{
+    width: 80%;
+    margin:0;
+    padding:0;
+    margin: auto;
+    line-height: 50px;
+}
+li{
+    float:left;
+    list-style-type: none;
+    width: 25%;
+    text-align: center;
+}
+li a{
+    text-decoration: none;
+    padding: 10px;
+    color: #ffffff;
+}
+li a :visited{
+   color: black;
+}
+li a:hover{
+    background-color: #ffffff;
+    color: #000000;
+ }
+ li a:active{
+    background-color: #ff0000;
+    color: #000000;
+ }
+ p{
+     display: none;
+ }
+span:hover + p{
+    display: block;
+}

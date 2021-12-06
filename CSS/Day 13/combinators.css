@@ -1,0 +1,17 @@
+div{
+    height: 20px;
+}
+
+div p{
+    background-color: blue;
+}
+div > p{
+    background-color: yellow;
+}
+ div + main{
+     color:red
+ }
+
+ div ~ main{
+    color:green
+}

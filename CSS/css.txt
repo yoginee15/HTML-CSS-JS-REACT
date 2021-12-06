@@ -719,3 +719,182 @@ font variant : normal | small-caps | all-small-caps | titling-caps | intial | in
 shorthand - font : style variant weight size line-height family 
 
 size and family required
+
+Pseudo Classes:
+A pesudo-class is used to define a special state of an element.
+Styntax:a :link{  //default
+
+        }
+        a :visited{ //we already clicked
+
+         }
+         a :hover{  //mouse enter
+
+         }
+
+         a :active{ //clicked
+
+         }
+   
+
+:hover 
+
+
+Combinators:
+descendant: Irrespective of hierarchy
+ div p{
+     background-color: red
+ }
+
+ child: >
+ div > p{
+     background-color: red
+ }
+
+adjacent selector + 
+div + p{
+
+}
+ 
+ <p>
+ <div> 
+ <p>
+
+
+ div
+ span
+ p
+
+ general sibiling ~
+
+ div ~ p{
+
+ }
+
+
+ div
+ p
+
+ div 
+ span
+ ul
+ p
+
+
+1. after h1 at any place if you h3 then will show that in green color
+body h3{
+  color:green  
+}
+
+2. if you get ul tag after any li Irrespective of anchor tag is present or not then put display none propety for ul
+ li ul{
+     display: none
+ }
+  li > a + ul{
+      display: none
+  }
+
+3. table first row background color black
+table > thead > tr / table thead > tr
+
+table tbody > tr:first-child{
+background-color: #000000;
+color: #ffffff
+}
+
+
+4. table all rows should be background color gray
+table tr
+
+table tbody > tr{
+
+}
+
+ |    |   |
+
+
+5. if you get span immediately after icon then put margin-right:10px
+i + span{
+    margin-right: 10px
+}
+
+6. all links on page having same css styling
+body a{
+
+}
+
+descendant:
+ space:
+ will apply on all nested child/grandchild
+
+child selector
+>
+child
+
+adjacent 
++
+immediate sibiling(next)
+
+Gernaral sibiling
+~
+all sibiling(all next sibilings)
+
+:first-child :
+
+table tbody > tr:first-child{
+background-color: #000000;
+color: #ffffff
+}
+
+div:first-child{
+
+}
+
+div :nth-child(3){
+    background-color: red
+}
+
+div:nth-child(3n+0){
+    background-color:red
+}
+
+an+/-B
+// n= 0,1,2,3,4 counter : //browser
+
+a - multiple/ cycle size 
+b - offset
+
+3n+0 // 
+3's multiple
+3(0)+0 = 0  //0
+3(1)+0 = 3 // 3
+3(2)+0 = 3 // 6
+
+table tr:nth-child(2n+0){  // table tr:nth-child(even)
+
+}
+
+table tr:nth-child(2n+1){  // table tr:nth-child(odd)
+
+}
+
+div:last-child{
+
+}
+
+div p:only-child{
+    background-color:red
+}
+
+
+nth-last-child(an+b){
+    
+}
+
+:first-of-type
+:last-of-type
+:only-of-type
+
+div p:first-of-type{
+    background-color:red
+}

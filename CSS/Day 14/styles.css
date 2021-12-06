@@ -1,0 +1,10 @@
+div + div:nth-child(1n){
+    background-color: blueviolet;
+}
+div p:only-child{
+    color:red
+}
+
+/* body > div:nth-last-child(2){
+    background-color: brown;
+} */
