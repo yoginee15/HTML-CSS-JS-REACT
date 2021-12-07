@@ -888,13 +888,38 @@ div p:only-child{
 
 
 nth-last-child(an+b){
-    
+
 }
 
+
 :first-of-type
+:nth-of-type
 :last-of-type
 :only-of-type
+:nth-of-last-type
+
 
 div p:first-of-type{
     background-color:red
 }
+
+body p:last-of-type{
+    background-color: red
+}
+
+body main: only-of-type{
+
+}
+
+body section:nth-of-last-type(3){
+    color:red
+}
+
+body    
+    p - 1st child, first-of-type of p t1
+    div - 2nd child, first-of-type div 
+    main - 3rd-child, first-of-type main
+    p - 4th child, nth-of-type(2), last-of-type p t2
+    div - 5th child, nth-of-type(2), last-of-type div
+
+:target    

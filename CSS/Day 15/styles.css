@@ -1,0 +1,38 @@
+/* div:first-child:first-of-type{
+    background-color: brown;
+} */
+
+p:last-child{
+    background-color: cadetblue;
+}
+
+div ~ div:last-of-type:nth-last-child(2){
+    background-color: chocolate;
+}
+
+p:nth-of-type(1):only-child{
+    color:white
+}
+
+div > div:last-child{
+ border-right: none;
+ margin-right: none;
+}
+
+section{
+    width: 90%;
+    margin:auto
+}
+
+section > div{
+    float:left;
+    width:30%;
+    border-right: 1px solid black;
+    height: 100px;
+    padding: 15px;
+}
+section > div:last-child{
+    border-right: none;
+    margin-right: none;
+   }
+  
