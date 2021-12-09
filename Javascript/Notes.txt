@@ -1,0 +1,487 @@
+var c;
+
+Why we need JS?
+- To make web pages interactive or alive.
+- JS is a scripting language.
+- We can write our JS code in HTML using <script> tag.
+- Its interpreted language.
+
+History:
+- Intially it was named as "Live script"
+- Java support, JavaScript
+- Independent, ECMAScript.
+
+Difference between Java & JavaScript:
+1. Java: Is an OOP's language
+   JS: Is an Object based language. (Object)
+2. Java: Compiled language
+   JS: interpreted language
+3. Java : Must need to specify datatype. Strictly 
+   JavaScript: loosely type language   
+4.
+
+- To run javascript we need a special program called "javascript engine"
+
+javascript engine:
+v8 - Chrome, Opera, Edge
+SpiderMonkey - Firefox
+Charkar - IE
+Squirrel Fish - Safari
+
+Official refrence website: mdn
+
+Requirements:
+- Editor : VScode
+- Browser: Chrome, Firefox, any
+- nodejs: Required if we want to run js outside a Browser
+
+Node installation:
+- Download : https://nodejs.org/en/download/
+- Check its get installed or not: node --version / node -v
+
+javascript:
+1997
+ES5 - 2009 
+ES6
+ES7
+ES8
+
+Fundatmentals:
+1. <script src=""> </script> : we can external JS in HTML. 
+2.   <script> </script> : inner scripting
+
+<script src="">
+alert("Hi"); //ignore
+</script>
+
+Statements:
+let a; let b;
+let c = 2+3;
+let a =1
+
+Comments:
+Single //
+Multiple line /* */
+Nested : /*
+               /* */
+         */
+
+Modern JavaScript:
+"use strict" : ES5   - Js directive
+
+Variables:
+We can declare Variables in 3 ways:
+1. var - old school (Gloabl i.e. its available on window object, function level scope)
+var PI = 3.14
+
+2. let 
+3. const
+(ES5, block level scope)
+
+function div(a,b){
+
+   if(b>0){
+      var result = a/b;
+      console.log("Result",result)
+   }
+      console.log("Result",result)
+
+}
+
+
+
+let a = 2
+a = 3
+
+a =    3
+      2000
+
+
+/////////////////////////////////////////////////////
+let []arr: int = [1,2,4]
+arr.length = 3 * 4 = 12 bytes;
+
+i              0     1    2 
+val            1     2    4
+mem a        5000  5004  5008
+             5003  5007 
+index=0  =   base addr + (i*datatype bytes)
+             5000 + (1*4)
+             5000 + 4
+             5004
+
+let arr = [1,2]  
+let arr1 = [1,2]
+if(arr==arr1){ // falsy
+   both are similar
+}
+
+/////////////////////////////////////////////////////////////
+
+const MAX_VAL = 100;
+const PI = 3.14;
+
+characters,$ and _, digit
+Variables name never start with digit
+Reserved can't be used
+
+JavaScript is case sensitive language
+let MAX; let max; let mAx;
+
+javascript follows camel case naming convention
+ let myVariable
+ let testFunction
+
+let a; //declartion
+a = 7; //assignment
+
+let b=7 //declartion + assignment
+
+Hoisting:
+var hoisted : declartion gets shift to top of its block
+let,const it will never hoisted
+
+function div(a,b){
+//var result;
+console.log("result",result) 
+// result undefined
+//Error: result is not defined
+   if(b>0){
+      var result = a/b;
+      // result = a/b;
+      console.log("Result",result)
+   }
+      console.log("Result",result)
+
+}
+
+
+function div(a,b){
+console.log("result",result) 
+//Error: result is not defined
+   if(b>0){
+      let result = a/b;
+      console.log("Result",result)
+   }
+      console.log("Result",result)
+//Error: result is not defined
+
+}
+const PI = 3;
+PI = 3.14 //Error : 
+
+var c= 9;
+
+
+Datatypes in JS:
+1. number  1, 1.1, 2^64
+NaN - Not a Number
+Infinity 
+-Infinity
+2. BigInt : arbitary length : 1n
+3. String: "C", '', ``
+let courseName = "JavaScript"
+let versionNo = "ES2018"
+console.log("We are learning " + courseName + "version " + versionNo) 
+console.log(`We are learning ${courseName} version ${version}`)
+
+4. Boolean: true / false (logical operation)
+5. null: (empty)
+6. undefined
+let a;
+typeof a //undefined
+let b = undefined;
+
+7. Symbol :let idSymb = Symbol("id")
+           let id2Symb = Symbol("id") 
+let num = 10;
+
+8. Object: Complex data type : Collection of different datatypes, multiple key:value pairs
+let person = {name:"Xyz", age:29}     
+
+
+typeof / typeof() : To check datatype of Variables/ Literals
+typeof num; //number
+typeof(num); //number
+typeof 2 //
+typeof "My string" // string
+typeof true // Boolean
+********** typeof null // object
+typeof undefined // undefined
+typeof Symbol(1) // Symbol
+typeof person // object
+
+
+typeof typeof 0
+- typeof 'number'
+- string
+
+
+Window pop boxes:
+1. alert: Syntax: alert(message): To show message to user. OK
+2. prompt: Syntax: let result = prompt(title/message,[defaultValue]) : To take an input from user. OK and Cancel
+3. confirm: Syntax: let result = confirm(question). Ok and Cancel
+
+
+DataType conversions:
+Explicit type conversion:
+
+String conversion:
+String
+
+let str = String(2) // "2"
+let booleaToStr = String(true) //"true"
+left nullToStr = String(null) //"null"
+
+Numeric conversion:
+Implicit conversion:
+- With mathmatical operations(-,*,/,%,**)
+- Math 
+
+Explicit conversion:
+- Number:
+- +
+
+let num = Number("12") //12
+let num1 = +"12" //12
+
+let num2 = Number(true) //1
+let num3 = Number(false) //0
+
+let num4 = Number(null) //0
+
+let num5 = Number(undefined) // NaN
+
+let num6 = Number("testing number conversion") // NaN
+let num7 = Number(" ")/ Number("") // 0
+
+Boolean conversions:
+Logical operations: (<,>, <=, >=, == , !=, ===, !==)
+Boolean()
+let str = "my string"
+let str = Boolean("w") // true ""
+let num = Boolean(0) //false
+let nullConv = Boolean(null) //false
+let undefinedCov = Boolean(undefined) //false
+let stringWithZero = Boolean("0") //true
+
+
++"8a" // NaN
++"" // 0
++"true" //NaN
++true //1
+ 
+-"" //-0
+-true //-1  
+
+let add = 2 - true // 1
+
+let add1 = 2 + "1" //21
+let add1 = 2 - "1" //1
+
+let add2 = 2 + null //2
+let add = 2 + undefined //NaN
+
+Operators:
+operand / Operator
+
+
+Unary, Binary, Ternary
+-true = -1
+
+Unary: ++, --, +, -
+Single operand
+++, -- : Variables, 2++ , 2-- 2 = 2+1
+i++; // 2
+i = i+1
+
+-- 
+temp--;
+//4
+
+prefix/ postfix:
+++i //
+i++ //
+
+let i = 1
+let temp = 5
+let add = ++i + ++temp        // i++ + temp++ : 6
+add  //  8  
+i // 2
+temp // 6
+
+
+- , +:
+
+Binary:
++,-,*, /, %, **
+2 operands:
+
+5%2 = 1
+
+**
+2 ** 3 = 8
+4 ** 1/2 = 2
+
+
++:
+2 + 2 // 4
+"2" + "2" = 22
+2 + "2" = 22
+2 + 2 + "2" = 42
+2 + "2" + 2  = 222
+"2" + 2 + 2 = "22" + 2 = "222"
+
+3 + "4" = 34
+10 +  11 + "1" = 11 |  211 
+
+-:
+10 - 8 // 2
+9 + 4 - "7" = // 137 | 20 | 6 | -137        6
+ 13-7 = 6
+
+10 - 2 + "1" //81
+
+
+10 + null + "2" //102 | 10null2 | 10 2
+= 10 + "2"
+= 102
+
+9 + undefined + 9 = 18 | NaN
+9 + NaN = NaN + 9 = NaN
+
+9 + 0 + "false" = 90 | 900 |
+= 9false
+
+true + 0 + null = NaN | 10 | 1 | 
+ = 1
+
+
++=, -= , *=, /=, %=
+i++ : i = i+1
+ n += 5
+ n = n+5
+
+a -= 2
+a = a-2
+
+r *=3
+r = r*3
+
+
+let a = "test"
+a += 2 // a = a+2
+       // a = "test" + 2
+       // a = test2
+
+let b = "2"
+b -=2 // b = b - 2 
+      // b + 2 = "2" - 2 = 2 - 2   
+b //0         
+
+
+Bitwise:
+AND (&), OR(|), NOT(~), XOR(^), Left Shift (<<), Right Shift
+
+ 2 & 3 = 23 | 2
+
+1 - 0 1
+2 - 1 0
+3 - 1 1
+
+
+AND logical gate         OR logical gate           XOR logical
+ i/p1 i/p2 o/p            i/p1  i/p2   o/p            o/p1
+   0   0    0              0     0      0              0
+   0   1    0              0     1      1              1 
+   1   0    0              1     0      1              1
+   1   1    1              1     1      1              0 
+
+
+  1 0
+& 1 1
+--------
+   1  0  // 2
+
+
+2 | 3
+
+   1  0
+|  1  1
+--------
+   1   1  //3
+
+
+2 ^ 3
+
+      1   0
+^     1   1
+----------------
+      0   1
+
+// 1
+
+
+Left shift <<
+2 << 3
+2 << 1
+ 00 // 0 
+
+
+7 << 2
+
+100 // 4
+
+
+Right shift >>
+ 7 >> 2
+ 001 // 1
+
+Operator precedence:
+B, + , -, **, *, /, + , - , = ,'
+
+
+Comparison :
+<, <=, >, >=, ==, !=, ===, !==
+
+2 < 1 // false
+2 >= 2 // true
+
+'2' < '1' // false // unicode based
+32 < 31 // false
+
+'2' < 3 // true
+2 < 3 // true
+
+'01' > 1 // false
+'01' == 1 //true
+
+** null == undefined // true
+** null == 0 // false
+ null > 0 //false
+ null < 0 //false
+
+** null >= 0 // true
+** null <=0 //true
+ 
+undefined == 0 //false
+undefined < 0 //false
+undefined > 0 // false
+
+true > 1 //false
+false > 1 // false
+
+false == '0' // false 
+false == 0  // true
+true == '0' // true
+
+Boolean conversion:
+'0' -  true
+0 - false
+'' - false
+' ' - true \s
+null - false
+undefined - false
+-1 - true
+
+
