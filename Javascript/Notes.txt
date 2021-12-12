@@ -577,11 +577,23 @@ if(a>b && a>c){
 1 0 1
 
 Logical operators: &&, ||, ! // boolean
-- Short hand operators
+- Short hand operators / Short circuit operators
 &&- all true
 || - any one true
 ! - true=false vice-versa
 
+let input = prompt("Please enter some number")
+''
+0
+false
+
+true
+
+if(!input){
+   alert("Please enter value")
+}else{
+
+}
 
 2 && 0 && 5 // 0
 2 || 0 || 4 // 2
@@ -594,9 +606,144 @@ null - false
 
 let input = prompt("Please enter your name");
 if(!input){
-   alert("Welcome gues")
+   alert("Welcome guest")
 }else{
    alert("Welcome "+ input)
+}
+
+Conditional operators/ Ternary operator:
+if else:
+condition ? if condition is true : if condition is false
+if(condition){ }else{ }
+
+let a= 5, b=3;
+a > b ? alert("a is greater") : ("b is greater")
+
+Nullish operator: ??
+null / undefined
+Syntax : first stmt ?? second stmt
+if first stmt is not null / undefined then it will return first stmt value otherwise it return second stmt value
+
+let userName = prompt("Enter your name")
+alert("Hello " + userName ?? 'Guest')
+
+
+|| &&
+
+a ?? b 
+if(a!==undefined && a!==null) {a} else {b}
+a!==undefined && a!==null ? a : b
+
+
+let isAllowed = false;
+'',0,false 
+
+isPassed ?? 'Exam not attempted'
+
+let input = +prompt("Enter number") // 0
+
+if(input){
+   alert("Your entered ", input)
+}else{
+   alert("Please enter some valid number")
+}
+input ? alert("Your entered ", input) : ("Please enter some valid number")
+ 
+let number1 = input ?? -1
+number1 = -1
+
+Loops: while , do...while, for
+while(condition){
+ //iteration
+}
+
+do{
+
+}while(condition)
+
+for(initialisation; condition ; step){
+
+}
+
+for(; ; ;) // infinite Loops
+
+let i=10;
+for(; i>0; i--){
+   //block body
+}
+
+
+for(let i=10; i>0; i--){
+   //block body
+}
+// i 
+
+1. initialisation i =10
+2. condition check 
+3. if condition is true block execution
+4. it will execute step action
+5. Perform step 2
+4. if condition is false it will execute block
+
+
+break 
+- loops/ switch
+- break/stop the execution of loop
+
+continue:
+- break/skip iteration
+- 
+
+Label for break and continue:
+outer : for(let i=0; i<5; i++){
+      inner : for(let j=0; j<5; j++){
+         if(i==j){
+            break outer;
+         }
+         i, j
+      }
+}
+
+
+Conditional Branching:
+if else if else
+
+switch(condition){
+   case 'Add': 
+         //
+      [break]
+   case 2:
+         //
+         [break]      
+         .
+         .
+         .
+   default :
+      [break]     
+}
+
+Grouping cases:
+switch(month){
+   case 'Jan':
+   case 'Feb':
+   case 'Mar':
+   case 'Apr':
+                alert("Your favourite sesaon is summer")
+                break;
+   case 'May':
+   case 'Jun':
+   case 'Jul':
+   case 'Aug':
+             alert("Your favourite sesaon is rainy")
+             break;
+   case 'Sep':
+   case 'Oct':
+   case 'Nov':
+   case 'Dec':
+            alert("Your favourite sesaon is winter")
+            break;
+   default:
+   alert("You haven't told your favourite season")
 }
 
 
