@@ -6,3 +6,6 @@ if (no2 == 0) {
     alert("Division is " + no1 / no2)
     console.log("Result", no1 / no2)
 }
+function add() {
+    alert(no1 + no2)
+}

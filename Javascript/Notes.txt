@@ -747,3 +747,158 @@ switch(month){
 }
 
 
+Functions:
+declartion:
+
+function functionName([param1,param2,...]){
+//body   
+}
+
+Ex. function add(){
+   let result = 2+3;
+}
+Ex. function add(a,b){
+   let result = a + b
+}
+
+Local Variables:
+- Declared inside function
+- Only accessible inside function
+
+Gloabl Variables:
+blocklevel Variables:
+
+
+Local variables:
+function greetUser(){
+   let message= "Hello world"
+   alert(message)
+}
+
+Outer Variables:
+-The outer variables are varaibles, it can be part of any function.
+- parent function alive
+
+function outer(){
+   let a =2;
+   function inner(){
+      let b=5
+      console.log(a) // 2
+      let result = a+b
+      if(result){
+         let a = 9
+      }
+      console.log(a)// 2
+   }
+   console.log(a) // 2
+}
+
+Gloabl variables:
+- Variables which declares outside of any function/block are called as Gloabl varaibles.
+Global varaibles acan also access and modify by other functions.
+- script alive
+
+function outer(){
+   let a= 10
+   function inner(){
+      let a =2;
+      let b=5 
+      console.log(a) // 2
+      let result = a*b
+      if(result){
+          a = 9
+      }
+      console.log(a) // 9
+   }
+   console.log(a) // 10 
+}
+ console.log(a) // Error
+
+outer()
+
+Parameters:
+- We can pass data to function by passing arguments while calling function.
+- Parameters are nothing but local variables
+- local scope / function scope
+
+function add(a,b){ // let a=, let b=
+ let result = a+b 
+}
+add() // a = undefined, b = undefined
+
+Default Values:
+If function is called but its arguments are not passed then Parameters should remain undefined
+
+1. function add(a=0,b=0){ a=4,  b=5
+   let result = a+b
+}
+add()
+add(4,5)//
+
+2. function add(a,b){
+   if(a===undefined){
+      a=0
+   }
+   if(b===undefined){
+      b=0
+   }
+   let result = a+b
+}
+
+3. function add(a,b){
+   a = a || 0
+   b = b || 0
+   let result = a+b
+}
+
+nullish operator
+a = a ?? 0
+b = b ?? 0
+
+
+2 && 0 && 7 // 0
+1 || 0 || 3 // 1
+8 && 7 // 7
+
+
+Return value:
+- return result/airthmatic/etc
+- return (undefined)
+
+return: 
+
+function createUse(){}
+function getResult(){}
+function setValue(){}
+function checkNumber(){}
+function showMessage()/displayMessage(){}
+function calcAdd(){}
+
+Function Expression:
+let a =2, "test", false, null, undefined
+
+function add(){
+   let restult = 2+3
+}
+
+add();
+
+Function without name "Anonymous function"
+
+- Immediately Inovked Function execution (IIFE):
+function (){
+   alert("Hi")
+}();
+
+
+let a = function(){
+   alert("Hi")
+}
+ //function Expression
+
+a; //function(){
+   alert("Hi")
+}
+
+a();
+
