@@ -762,14 +762,14 @@ Ex. function add(a,b){
 }
 
 Local Variables:
-- Declared inside function
-- Only accessible inside function
-
+Outer Variables:
 Gloabl Variables:
 blocklevel Variables:
 
 
 Local variables:
+- Declared inside function
+- Only accessible inside function
 function greetUser(){
    let message= "Hello world"
    alert(message)
@@ -798,6 +798,7 @@ Gloabl variables:
 Global varaibles acan also access and modify by other functions.
 - script alive
 
+let a =6
 function outer(){
    let a= 10
    function inner(){
@@ -812,9 +813,8 @@ function outer(){
    }
    console.log(a) // 10 
 }
- console.log(a) // Error
-
-outer()
+ console.log(a)
+outer();
 
 Parameters:
 - We can pass data to function by passing arguments while calling function.
@@ -901,4 +901,58 @@ a; //function(){
 }
 
 a();
+
+
+function outer(){
+   let a= 10
+   function inner(){
+      //var a = undefined
+      let b=5 
+      console.log(a()) //  undefined()
+      let result = a*b // undefined
+      if(result){
+          a = 9 // Error
+      }
+     var a = function (){alert("Hi")}
+      console.log(a) // 2
+   }
+   console.log(a) // 10
+}
+ console.log(a) // Error
+
+
+
+Difference between function declartion and function Expression:
+1. 
+2.
+3.
+
+Callback function:
+Either Anonymous or function Expression
+
+function handleInputs(a,b,add,concat){
+   if(typeof a==="number" && typeof b==="number"){
+      add(a,b)
+   }else{
+      concat(a,b)
+   }
+}
+
+function addNumber(a,b){
+   return "Addition is: "a+b
+}
+
+function concat(a,b){
+   return "Concatenation is: "a+b
+}
+
+handleInputs(2,3,addNumber,concat)
+handleInputs("test","string",addNumber,concat)
+
+
+Arrow Function:
+Syntax : ([param1,param2]) => ;
+
+let add = () => {2+3}
+console.log(add)  //undefined
 
