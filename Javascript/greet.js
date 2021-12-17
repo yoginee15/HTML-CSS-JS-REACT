@@ -22,5 +22,5 @@
 //     concat))
 // console.log(handleInputs("test", " string", addNumber, concat))
 
-let add = () => 2 + 3
+let add = () => { 2 + 3 }
 console.log(add())  //undefined

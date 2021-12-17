@@ -956,3 +956,196 @@ Syntax : ([param1,param2]) => ;
 let add = () => {2+3}
 console.log(add)  //undefined
 
+Objects in JS:
+Object is a Collection of key-value paired.
+key - string/Symbol
+value - can be anything. 
+
+Syntax:
+1. Using new Object() operator
+2. {} // object literal Syntax
+
+let myObj = new Object();
+// myObj = {}
+
+2. let myObj1 = {} // empty object
+
+let user = {
+   name: "xyz", //property
+}
+
+// To read/access object property/properties:
+1. '.'
+2. []
+
+user.name
+user['name']
+
+//To  add properties in object dynamically
+user.age = 30;
+//To edit/update
+user.name = "pqr"
+
+user // {name:'pqr',age:30}
+
+// To delete/remove properties in object:
+- delete 
+Ex. delete user.age
+user //{name:'xyz'}
+
+
+Computed properties:
+let user = {}
+let property = prompt("Which property you want to add in user object")
+let value = prompt("Please tell us value for "+ property)
+user[property] = value
+alert("Now your user object is", user)
+
+Property shorthand:
+let user1 = {
+   name:'xyz',
+   age: 30
+}
+
+let user2 = {
+   name: 'pqr',
+   age:20
+}
+
+// Factory pattern:
+function createUser(name,userAge){
+   return {
+      name : userName,
+      age: userAge
+   }
+}
+
+let user1 = createUser('xyz',30) // {name:'xyz',age:'30'}
+let user2 = createUser('pqr',20) // {name:'pqr',age:'20'}
+let user3 = createUser('bob',40) // {name:'bob',age:'40'}
+let user5 = createUser('tom',20) // {name:'tom',age:'20'}
+let user5 = createUser('guy',60) // {name:'guy',age:'60'}
+
+Property shorthand
+function createUser(name,age){
+   return {
+      name , // "name" : name
+      age // "age" : age
+   }
+}
+
+let myObj = {null:"test",1,"xyz"} // {"null":test, "1":xyz}
+
+
+Property existance: (using Comparison operator and "in" operator)
+let user = {name:"xyz",age:50, experience:undefined}
+if(user.experience === undefined){
+   console.log("experience property is not available in user object")
+}
+
+2. in operator:
+Syntax: prop in obj // true 
+
+if(!"experience" in user){
+   console.log("experience property is not available in user object")
+}
+
+- Object ordering:
+let testUser ={
+   "fName":"test",
+   "mName":"testM",
+   "lName":"testL",
+   age:30,
+   city:"Pune",
+   0:"test with number key"
+}
+for(let prop in testUser){
+   alert(prop)
+}
+
+// Iteration 1: user : 1st key: prop = 0; hasNext
+{
+   itr = 0:"test with number key", hasNext= true
+   "fName":"test", hasNext=true
+   "mName":"testM",
+   "lName":"testL",
+   age:30,
+   city:"Pune",hasNext=false
+}
+
+
+- for(let key in obj){
+
+}
+
+
+-Object refrencing and copying
+let a =2;
+let str = "Hello world"
+
+2
+3000 = a
+
+
+Hello world
+10000 = str
+
+
+let user ={name:"xyz",age:25,}
+
+                  |name: |  age:  |
+                  |Bob   |   25   |
+                  |______|________|
+                  20000   4       20008
+
+20000       20000
+user        userCopy 
+
+let userCopy = user; // copy by refrence
+//userCopy 20000
+userCopy.name // xyz
+user.age // 25
+userCopy.name = "test"
+user.name //test
+
+-Object Comparison
+user === userCopy //true
+
+let a = {}   // a = 90000
+let b = {}   // b = 3000
+a === b //false
+
+-Object cloning, merging and Object.assign
+   - for...in loop
+
+let userCopy1 = {}
+let a = true
+ user['key'] //undefined
+ user['name'] //xyz
+
+ user[name] // name is not defined
+// name : not defined
+  let user ={name:"xyz",age:25}
+
+      for(let key in user){
+         userCopy1[key] = user[key]
+      }
+//1st iteration key = 'name'
+
+Left side evaluation:
+//  userCopy1[key] = user[key]
+//user[key] : key= name : user['name'] : xyz
+// userCopy1[key] = xyz
+
+Right side evaluation:
+
+
+
+   - Object.assign
+   - spread operator ...
+
+- Object modification with const declartion
+- Garbage Collection
+- "this" keyword
+- Constructor function
+- optional chaining
