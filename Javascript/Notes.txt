@@ -1138,6 +1138,39 @@ Left side evaluation:
 // userCopy1[key] = xyz
 
 Right side evaluation:
+// userCopy1[key]
+// userCopy1[key] : userCopy1['name']
+
+userCopy1['name'] = "xyz" //update/add
+let student = {
+   rollNo:1,
+   name:"xyz",
+   class:"fy"
+}
+let copyOfStudent = {};
+for(let prop in student){
+   copyOfStudent[prop] = student[prop]
+}
+// copyOfStudent:  {} | {undefined, undefined, undefined} | undefined | {undefined} | Error
+// {prop:undefined}
+// copyOfStudent: {rollNo:undefined,
+   name:undefined,
+   class:undefined}
+
+// {
+   rollNo:1,
+   name:"xyz",
+   class:"fy"
+}
+
+
+let user= {id:1, name:"xyz"}
+user.name="Bob" //{id:1, name:"Bob"}
+user['role'] = "admin" // {id:1,name:"Bob", role:"admin"}
+user[id] =10 // {id:10, name:"Bob",role:"admin" } // wrong ans
+user[my] = "Singing" // {id:10, name:"Bob", role:"admin", my:"Singing"} //wrong ans
+
+
 
 
 
@@ -1149,3 +1182,96 @@ Right side evaluation:
 - "this" keyword
 - Constructor function
 - optional chaining
+
+
+
+Object.assign: object copy()
+Syntax : Object.assign(destinantion,obj1, obj2,...)
+
+let users ={}
+
+let user1 = {name:"Bob",age:30, role:"admin"}
+let user2 = {name:"Tom",age:29, role:"user"}
+
+Spread operator:
+let userCopy1 = {...user1}
+
+
+const user = {name:"XYZ",age:30} 
+user.age = 35; // allowed
+console.log("User",user)
+user = {} //Error
+
+Grabage Collection:
+let user = {name:"xyz",age:20}  //3000
+let copyUser = user; //3000
+
+user = null //null
+
+copyUser // 3000
+
+copyUser = null
+
+
+"this" keyword:
+
+let usr ={name:"t",age:33}
+usr.name ;
+
+function CreateUser(name,age){
+   this.name = name; //"Bob"
+   this.age = age; // 26
+   // return this(Implicit)
+}
+
+//let user = CreateUser("test",30)
+let user1 = new CreateUser("Bob",26)
+{}
+{}.CreateUser("Bob",26)
+this = {name:"Bob",age:26}
+return this(Implicit) // {name:"Bob",age:26}
+user1 =  {name:"Bob",age:26}
+
+
+let user2 = new CreateUser("Tom",45)
+let user3 = new CreateUser("test",23)
+let user4 = new CreateUser("zyx",26)
+let user5 = new CreateUser("Bob1",44)
+let user6 = new CreateUser("Jay",83)
+let user7 = new CreateUser("Guy",43)
+let user8 = new CreateUser("Ryan",21)
+
+
+function CreateUser(name,age){
+   this.name = name; //"Bob"
+   this.age = age; // 26
+   this.greet =  function(){
+      alert("Hi")
+   }
+   // return this(Implicit)
+}
+
+
+function CreateUser(name,age){
+   this.name = name;
+   this.age = age;
+   this.getName = function(){
+      alert(this.name)
+   }
+}
+
+let user = {
+   name:"xyz",
+   age:30
+   greet: function (){
+      alert(user.name)
+   }
+}
+
+let admin = user;
+user = null
+admin.greet()
+
+
+
+Optional chaining: 
